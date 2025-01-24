@@ -169,3 +169,14 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+.env
+.terraform/
+coverage/
+venv/
+env/
+.DS_STORE
+.vscode
+*.code-workspace
+*.sha256
+terraform.tfstate
