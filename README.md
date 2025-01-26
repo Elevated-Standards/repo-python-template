@@ -1,7 +1,6 @@
-# Elevated Standards Template Repository
+# Elevated Standards Python Repository Template
 
-
-This template repository equips you with the default initial files required for a Elevated Standards GitHub repository.
+This template repository equips you with the default initial files required for a Elevated Standards GitHub Python Repository.
 
 ## Included Files
 
