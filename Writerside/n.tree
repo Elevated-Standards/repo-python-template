@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="n"
+                 name="NOTES"
+                 start-page="notes.md">
+
+    <toc-element topic="notes.md">
+        <toc-element topic="Example-1.md">
+            <toc-element topic="Projects.md"/>
+            <toc-element topic="Guides.md"/>
+            <toc-element topic="DailyNotes.md">
+                <toc-element topic="2025.md">
+                    <toc-element topic="01-January.md"/>
+                </toc-element>
+            </toc-element>
+            <toc-element topic="References.md"/>
+            <toc-element topic="Tutorial.md"/>
+        </toc-element>
+        </toc-element>
+    </toc-element>
+</instance-profile>
