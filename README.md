@@ -1,31 +1,28 @@
 # Elevated Standards Python Repository Template
 
-This template repository equips you with the default initial files required for a Elevated Standards GitHub Python Repository.
+This template repository provides you with the essential initial files needed for an Elevated Standards GitHub Python Repository.
 
 ## Included Files
 
-The repository comes with the following preset files:
+**The repository comes with the following preset files:**
 
-* `.devcontainer`: Folder containing files used for setting up a devcontainer
-  * `devcontainer.json`: File configuring the devcontainer, includes VS Code settings
-* `.github`: Folder for Github-specific files and folders
-  * `workflows`: Folder containing Github actions config files
-    * `python.yaml`: File configuring Github action that runs tools and tests
+* `.devcontainer`: Directory housing the configuration files for initializing a devcontainer.
+  * `devcontainer.json`: File that configures the devcontainer, containing settings for VS Code.
+* `.github`: Directory dedicated to GitHub-specific files and configurations.
+  * `actions`: Directory containing custom GitHub Actions scripts or reusable workflows for automation within the repository.
+  * `workflows`: Directory housing configuration files for GitHub Actions.
+    * `python.yaml`: File that configures the GitHub Action responsible for executing tools and running tests.
 * `tests`: Folder containing Python tests
-  * `main_test.py`: File with pytest-style tests of main.py
-* `.gitignore`: File describing what file patterns Git should never track
-* `.pre-commit-config.yaml`: File listing all the pre-commit hooks and args
-* `main.py`: The main (and currently only) Python file for the program
-* `pyproject.toml`: File configuring most of the Python dev tools
-* `README.md`: You're reading it!
-* `requirements-dev.txt`: File listing all PyPi packages required for development
-* `requirements.txt`: File listing all PyPi packages required for production
-* `.github`: Folder for workflows, templates and etc.
-  * `dependabot.yml`:
-  * `workfows.yml`:
-  * `actions`:
-* `CODEOWNERS`:
-* `LICENSE`:
+  * `main_test.py`: File containing pytest-style test cases for `main.py`.
+* `.gitignore`: File specifying file patterns that Git should ignore and never track.
+* `.pre-commit-config.yaml`: File enumerating all pre-commit hooks and their associated arguments.
+* `main.py`: The primary (and currently sole) Python file for the program.
+* `pyproject.toml`: File that configures the majority of Python development tools.
+* `README.md`: This is it.
+* `requirements-dev.txt`: File containing a list of all PyPI packages required for development.
+* `requirements.txt`: File containing a list of all PyPI packages required for production.
+* `CODEOWNERS`: File specifying individuals or teams responsible for maintaining specific parts of the codebase, used for automatic review requests in pull requests.
+* `LICENSE`: File outlining the legal terms and conditions under which the software is distributed and used.
 
 ## Setup Instructions
 
@@ -88,13 +85,13 @@ If your repository is private with no GitHub Advanced Security license, remove t
 * `ruff`: identifies many errors and style issues (`flake8`, `isort`, `pyupgrade`)
 * `black`: auto-formats code
 
-Those checks are run as pre-commit hooks using the `pre-commit` library.
+Those checks are executed as `pre-commit` hooks using the pre-commit library.
 
-It includes `pytest` for testing plus the `pytest-cov` plugin to measure coverage.
+The setup includes `pytest` for running tests, along with the `pytest-cov` plugin to measure code coverage.
 
-The checks and tests are all run using Github actions on every pull request and merge to main.
+All checks and tests are automatically run via GitHub Actions on every pull request and merge into the main branch.
 
-This repository is setup for Python 3.11. To change the version:
+This repository is configured for Python 3.11. To switch to a different Python version:
 
 1. Change the `image` argument in `.devcontainer/devcontainer.json` (see [https://github.com/devcontainers/images/tree/main/src/python](https://github.com/devcontainers/images/tree/main/src/python#configuration) for a list of pre-built Docker images)
 1. Change the config options in `.precommit-config.yaml`
@@ -103,13 +100,13 @@ This repository is setup for Python 3.11. To change the version:
 
 ### With devcontainer
 
-This repository comes with a devcontainer (a Dockerized Python environment). If you open it in Codespaces, it should automatically initialize the devcontainer.
+This repository includes a devcontainer, which is a Dockerized Python environment. If you open the repository in GitHub Codespaces, the devcontainer will initialize automatically.
 
-Locally, you can open it in VS Code with the Dev Containers extension installed.
+For local development, you can open it in VS Code with the Dev Containers extension installed to set up the environment.
 
 ### Without devcontainer
 
-If you can't or don't want to use the devcontainer, then you should first create a virtual environment:
+If you are unable or prefer not to use the devcontainer, the first step is to create a virtual environment:
 
 ```
 python3 -m venv .venv
@@ -125,8 +122,7 @@ pre-commit install
 
 ### Adding code and tests
 
-This repository starts with a very simple `main.py` and a test for it at `tests/main_test.py`.
-You'll want to replace that with your own code, and you'll probably want to add additional files as your code grows in complexity.
+This repository begins with a basic `main.py` file and its corresponding test file located at `tests/main_test.py`. You should replace these with your own code, and as your project evolves, you’ll likely need to add more files to accommodate increasing complexity.
 
 When you're ready to run tests, run:
 
